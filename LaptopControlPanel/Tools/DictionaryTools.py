@@ -28,7 +28,7 @@ def init_default_key(d, **kwargs):
 
     """ Complete the dict *d* by the dict *kwargs*. """
 
-    for key, value in kwargs.items():
+    for key, value in list(kwargs.items()):
         if key not in d:
             d[key] = value 
 
@@ -56,7 +56,7 @@ class DictInitialised(object):
             else:
                 raise NameError('%s attribute is required' % (key))    
 
-        for key, default_value in self.__DEFAULT_ATTRIBUTES__.items():
+        for key, default_value in list(self.__DEFAULT_ATTRIBUTES__.items()):
             if key in kwargs:
                 value = kwargs[key]
             else:

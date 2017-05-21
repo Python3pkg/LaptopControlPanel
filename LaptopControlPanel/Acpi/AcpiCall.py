@@ -118,7 +118,7 @@ class AcpiCallArguments(object):
 
     def __init__(self, **kwargs):
 
-        items = sorted(kwargs.items(), cmp=lambda a, b: cmp(a[1], b[1]))
+        items = sorted(list(kwargs.items()), cmp=lambda a, b: cmp(a[1], b[1]))
         self._arguments = []
         lower_bit = 0
         for argument_name, upper_bit in items:

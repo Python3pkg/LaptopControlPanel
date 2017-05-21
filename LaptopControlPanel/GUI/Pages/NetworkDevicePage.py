@@ -61,7 +61,7 @@ class NetworkDevicePage(PageBase):
         row_layout_manager = RowLayoutManager(form.grid_layout)
         # Fixme: clear layout
 
-        for device in self._network_devices.itervalues():
+        for device in self._network_devices.values():
             type_label = QtGui.QLabel(device.type.title(), self)
             name_label = QtGui.QLabel(device.name, self)
             widgets = [type_label, name_label]

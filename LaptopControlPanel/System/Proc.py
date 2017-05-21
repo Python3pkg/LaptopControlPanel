@@ -76,7 +76,7 @@ class ProcFile(object):
         number_of_fields = len(compiled_format_list)/2 # +1 doesn't matter
 
         fields = {}
-        for i in xrange(number_of_fields):
+        for i in range(number_of_fields):
             index = 2*i +1
             field_tuple, separator = compiled_format_list[index:index+2]
             field_name, field_type = field_tuple

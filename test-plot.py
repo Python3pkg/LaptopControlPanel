@@ -9,7 +9,7 @@ data = db.battery_status_table.to_array()
 # 1371026025.72309,60,51,0.06,0.13,0.16
 data = data.transpose()
 data[0] -= data[0,0]
-print data
+print(data)
 
 fig = figure()
 plot(data[0], data[2])

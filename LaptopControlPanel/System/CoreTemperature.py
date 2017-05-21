@@ -40,7 +40,7 @@ class CoreTemperature(SysDevice):
     def __init__(self):
 
         path = None
-        for i in xrange(32):
+        for i in range(32):
             path = self.__path__.format(i)
             if os.path.exists(path):
                 break

@@ -150,7 +150,7 @@ class SqlTable(object):
     def select_by(self, **kwargs):
 
         filters = [getattr(self.ROW_CLASS, key) == value
-                   for key, value in kwargs.items()]
+                   for key, value in list(kwargs.items())]
 
         return self.query().filter(*filters)
 

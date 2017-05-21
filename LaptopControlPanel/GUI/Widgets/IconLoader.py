@@ -32,9 +32,7 @@ import LaptopControlPanel.Config.ConfigInstall as ConfigInstall
 
 ####################################################################################################
 
-class IconLoader(object):
-
-    __metaclass__ = SingletonMetaClass
+class IconLoader(object, metaclass=SingletonMetaClass):
 
     icon_size = 22
 

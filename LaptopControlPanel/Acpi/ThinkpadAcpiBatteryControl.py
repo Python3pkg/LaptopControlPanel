@@ -42,7 +42,7 @@ class BatteryControl(object):
     # EC means Embedded Controller
     _asl_base = r'\_SB.PCI0.LPC.EC.HKEY'
 
-    either_both_battery, main_battery, secondary_battery = range(3)
+    either_both_battery, main_battery, secondary_battery = list(range(3))
 
     ##############################################
 

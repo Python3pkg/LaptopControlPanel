@@ -122,7 +122,7 @@ class PowerSourcePage(PageBase):
         try:
             output = subprocess.check_output(['battery-control', '--gui', 'get-threshold'])
         except subprocess.CalledProcessError as exception:
-            print exception.output
+            print(exception.output)
             raise NameError("Get threshold call failed:\n" + exception.output)
         # {"start_threshold": 39, "stop_threshold": 80}
         prefix = '{"start_threshold": '
@@ -152,8 +152,8 @@ class PowerSourcePage(PageBase):
     def _apply_battery_charge_thresholds(self):
 
         start_threshold, stop_threshold = [spin_box.value() for spin_box in
-                                           self._form.start_threshold_spin_box,
-                                           self._form.stop_threshold_spin_box
+                                           (self._form.start_threshold_spin_box,
+                                           self._form.stop_threshold_spin_box)
                                            ]
         self._set_battery_charge_threshold(start_threshold, stop_threshold)
 

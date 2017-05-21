@@ -171,7 +171,7 @@ class FanPage(PageBase):
 
     @staticmethod
     def _format_degree(value):
-        return str(value) + u' °C'
+        return str(value) + ' °C'
 
     ##############################################
 
